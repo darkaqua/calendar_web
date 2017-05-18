@@ -22,20 +22,28 @@ class registreController extends Controller
        $rePassword = $request [ 'rePassword'];
 
        $url = 'calendar.darkaqua.net:8080/Account/Register';
-       $request = $client->request('POST', $url,[
-           'name' => 'felipe',
-           'username' => 'felipe',
-           'email' => 'felipe@gmail.com',
-           're_email' =>'felipe@gmail.com',
-           'password'=> '123',
-           're_password'=> '123',
-           'telephone' =>'688415700',
-           'country'=>'ES'
+       $request = $client->request('POST', $url, [
+           'json' => [
+                'name' => 'felipe',
+                'username' => 'felipe',
+                'email' => 'felipe@gmail.com',
+                're_email' =>'felipe@gmail.com',
+                'password'=> '123456789',
+                're_password'=> '123456789',
+                'telephone' =>'688415700',
+                'country'=>'ES'
+           ]
        ]);
 
-
        $json = $request-> getBody();
-       $arrayJson = json_decode($json, true)["message"];
-        var_dump($arrayJson);
+       $valid = json_decode($json, true)["valid"];
+       $message = json_decode($json, true)["message"];
+
+       if($valid){
+           return view('web.index');
+       }
+
+       return view('web.errorPage')->with('message',$message);
+
     }
 }
