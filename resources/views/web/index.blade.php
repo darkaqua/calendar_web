@@ -36,7 +36,7 @@
     <!-- no se com fer que el slider es mogui sol-->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="http://www.cnlegalnews.com/wp-content/uploads/2014/09/history-of-calendar.jpg" alt="Image">
+        <img src="https://cdn.discordapp.com/attachments/259760118990766081/311882854542082049/DSC_0019.JPG" alt="Image">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>

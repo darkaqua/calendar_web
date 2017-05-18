@@ -15,27 +15,36 @@ class registreController extends Controller
 
         $client = new client();
         $name= $request [ 'name'];
-       $surname=  $request [ 'surname'];
+       $userName=  $request [ 'userName'];
        $email = $request [ 'email'];
-       $reemail = $request [ 'reEmail'];
-       $password = $request [ 'Password'];
-       $rePassword = $request [ 'rePassword'];
+       $reEmail = $request [ 'reEmail'];
+       $password = $request [ 'Password' ];
+       $rePassword = $request [ 'rePassword' ];
+       $telefon = $request [ 'telefon' ];
 
        $url = 'calendar.darkaqua.net:8080/Account/Register';
-       $request = $client->request('POST', $url,[
-           'name' => 'felipe',
-           'username' => 'felipe',
-           'email' => 'felipe@gmail.com',
-           're_email' =>'felipe@gmail.com',
-           'password'=> '123',
-           're_password'=> '123',
-           'telephone' =>'688415700',
-           'country'=>'ES'
+       $request = $client->request('POST', $url, [
+           'json' => [
+                'name' => $name,
+                'username' => $userName,
+                'email' => $email,
+                're_email' =>$reEmail,
+                'password'=> $password,
+                're_password'=> $rePassword,
+                'telephone' =>$telefon,
+                'country'=>'ES'
+           ]
        ]);
 
-
        $json = $request-> getBody();
-       $arrayJson = json_decode($json, true)["message"];
-        var_dump($arrayJson);
+       $valid = json_decode($json, true)["valid"];
+
+       if($valid){
+           return view('web.index');
+       }
+       $message = json_decode($json, true)['message'];
+
+       return view('web.errorPage')->with('message',$message);
+
     }
 }

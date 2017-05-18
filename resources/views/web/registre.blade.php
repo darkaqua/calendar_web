@@ -13,9 +13,9 @@
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-search-input" class="col-2 col-form-label">Cognoms</label>
+  <label for="example-search-input" class="col-2 col-form-label">Nom d'usuair</label>
   <div class="col-10">
-    <input class="form-control" type="search" name="surname">
+    <input class="form-control" type="search" name="userName">
   </div>
 </div>
 <div class="form-group row">
@@ -33,7 +33,7 @@
 <div class="form-group row">
   <label for="example-tel-input" class="col-2 col-form-label">Password</label>
   <div class="col-10">
-    <input class="form-control" type="tel"  name="Password">
+    <input class="form-control" type="password"  name="Password">
   </div>
 </div>
 <div class="form-group row">
@@ -41,6 +41,12 @@
   <div class="col-10">
     <input class="form-control" type="password" name="rePassword">
   </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-password-input" class="col-2 col-form-label">Telèfon</label>
+    <div class="col-10">
+      <input class="form-control" type="tel" name="telefon">
+    </div>
   <div>
       <input type="submit"class="btn btn-success" value="Registrar" />
     <!--el Onclick per tirar una pagina enrera-->

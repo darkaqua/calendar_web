@@ -20,6 +20,9 @@ Route::get('/web/test.blade.php', function () {
 Route::get('/web/registre.blade.php', function () {
     return view('web.registre');
     });
+    Route::get('/web/errorPage.blade.php', function () {
+    return view('web.errorPage');
+    });
     Route::get('/web/companyRegister.blade.php', function () {
     return view('web.companyRegister');
     });
