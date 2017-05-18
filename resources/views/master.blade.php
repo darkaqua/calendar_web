@@ -19,7 +19,7 @@
    <div>
        <style>
 
-            .fontSize{
+                .fontSize{
                 font-size: 15px;
         
             }
@@ -40,7 +40,7 @@
                                 Perfil <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Usuari</a></li>
-                                <li><a href="#">Companyia</a></li>
+                                <li><a href="{{url('/web/companyRegister.blade.php')}}">Companyia</a></li>
                             </ul>
                             </li>
                                 <!--
