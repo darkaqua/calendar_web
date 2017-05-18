@@ -20,6 +20,9 @@ Route::get('/web/test.blade.php', function () {
 Route::get('/web/registre.blade.php', function () {
     return view('web.registre');
     });
+    Route::get('/web/companyRegister.blade.php', function () {
+    return view('web.companyRegister');
+    });
     Route::get('/web/calendar.blade.php', function () {
     return view('web.calendar');
     });
@@ -34,3 +37,4 @@ Route::get('tarifa', function (){
 
 Route::resource('webs','WebController');
 Route::get('/pagament','pagament@paymentPage');
+Route::post('/registreComplete', 'registreController@registreEmpresa');
