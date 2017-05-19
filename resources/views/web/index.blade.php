@@ -118,6 +118,7 @@
         </form>
   </div>
 </div>
+
 @stop
 @section('footer')
     <h5>App Company</h5>

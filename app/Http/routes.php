@@ -26,6 +26,15 @@ Route::get('/web/registre.blade.php', function () {
     Route::get('/web/companyRegister.blade.php', function () {
     return view('web.companyRegister');
     });
+    Route::get('/web/groupRegister.blade.php', function () {
+    return view('web.groupRegister');
+    });
+    Route::get('/web/showCompanies.blade.php', function () {
+    return view('web.showCompanies');
+    });
+    Route::get('/web/showGroups.blade.php', function () {
+    return view('web.showGroups');
+    });
     Route::get('/web/calendar.blade.php', function () {
     return view('web.calendar');
     });
