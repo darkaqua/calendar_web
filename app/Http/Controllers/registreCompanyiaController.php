@@ -23,7 +23,8 @@ class registreCompanyiaController extends Controller
         'headers' => [
                 'Content-Type' => 'application/json', 
                 'client_id' => $_COOKIE['client_id'], 
-                'token_id' => $_COOKIE['token_id']]
+                'token_id' => $_COOKIE['token_id']
+            ],
         'json' => [
                 'name' => 'pepeeeeeeeeeeeeeeeeeee',
                 'description' => 'asdasdasdasd',
