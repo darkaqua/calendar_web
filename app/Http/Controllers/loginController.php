@@ -22,7 +22,7 @@ class loginController extends Controller
        $request = $client->request('POST', $url, [
 
            'json' => [
-                'email' => $name,
+                'email' => $userName,
                 'password' => $userPassword
                 
            ]
@@ -33,7 +33,7 @@ class loginController extends Controller
 
        if($valid){
            setcookie('client_id', $json['client_id'],time()+60*60*24*365, '/');
-           setcookie('token_id', $json['token_id'],time()+60*60*24*365, '/');
+           setcookie('client_token', $json['client_token'],time()+60*60*24*365, '/');
            return view('web.index');
        }
        $message = $json['message'];
