@@ -21,6 +21,11 @@
     <input class="form-control" type="search" name="descripcio">
   </div>
 </div>
+ <div>
+      <input type="submit"class="btn btn-success" value="Registrar" />
+    <!--el Onclick per tirar una pagina enrera-->
+      <button type="button" class="btn btn-default"  onClick='history.go(-1);'>Cancelar</button>
+  </div>
 </form>
 </div>
 @stop

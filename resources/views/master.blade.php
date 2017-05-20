@@ -46,7 +46,7 @@
                                 <!--
                             <li><a href="{{url('/web/test.blade.php')}}">Agenda</a></li>-->
                             <li><a href="{{url('/tarifa')}}">Tarifes</a></li>
-                            <li><a href="{{url('/web/showGroups.blade.php')}}">Calendari</a></li>
+                            <li><a href="{{url('/web/groupRegister.blade.php')}}">Calendari</a></li>
                             <li><a data-toggle="modal" data-target="#modalContacte">Contacte</a></li>
                         </ul>
                     </div>
