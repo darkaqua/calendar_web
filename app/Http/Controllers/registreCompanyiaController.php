@@ -20,6 +20,10 @@ class registreCompanyiaController extends Controller
 
        $url = 'calendar.darkaqua.net:8080/Company';
        $request = $client->request('POST', $url, [
+        'headers' => [
+                'Content-Type' => 'application/json', 
+                'client_id' => $_COOKIE['client_id'], 
+                'token_id' => $_COOKIE['token_id']]
         'json' => [
                 'name' => 'pepeeeeeeeeeeeeeeeeeee',
                 'description' => 'asdasdasdasd',
