@@ -92,20 +92,19 @@
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Login</h4>
       </div>
-        <form class="form-inline">
+        <form class="form-inline"  method="post" action="{{url('/login')}}" >
           <label class="sr-only" for="inlineFormInput">Usuari</label>
-          <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="usuari">
+          <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" name="userName" placeholder="usuari">
 
           <label class="sr-only" for="inlineFormInputGroup">Password</label>
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="password">
+            <input type="text" class="form-control" name="userPassword" placeholder="password">
           </div>
 
           <div class="form-check mb-2 mr-sm-2 mb-sm-0">

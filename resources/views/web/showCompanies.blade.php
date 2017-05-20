@@ -31,7 +31,17 @@
                     </table>
                 </div>
 
-        </ul>
+    <div>
+        <a href="{{url('/web/companyRegister.blade.php')}}">
+        <input type="submit"class="btn btn-success" value="Registrar" /></a>
+        <!--el Onclick per tirar una pagina enrera-->
+        <a href="{{url('/')}}">
+        <button type="button" class="btn btn-default" >Cancelar</button></a>
+        
+    </div> 
+ </ul>
+
+       
 @stop
 @section('footer')
     <h5>App Company</h5>

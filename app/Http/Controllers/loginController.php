@@ -8,27 +8,28 @@ use GuzzleHttp\Client;
 
 use App\Http\Requests;
 
-class registreCompanyiaController extends Controller
+class loginController extends Controller
 {
-    public function registreCompanyies(Request $request)
+    public function registreLogin(Request $request)
     {
 
         $client = new client();
+        $userName= $request [ 'userName'];
+        $userPassword = $request ['userPassword'];
         
-        $companyName= $request [ 'companyName'];
-        $descripcio = $request ['descripcio'];
 
-       $url = 'calendar.darkaqua.net:8080/Company';
+       $url = 'calendar.darkaqua.net:8080/Account/Login';
        $request = $client->request('POST', $url, [
-        'json' => [
-                'name' => 'pepeeeeeeeeeeeeeeeeeee',
-                'description' => 'asdasdasdasd',
-                'country'=>'ES'             
+
+           'json' => [
+                'email' => $name,
+                'password' => $userPassword
+                
            ]
        ]);
 
        $json = $request-> getBody();
-       $valid = json_decode($json, true);
+       $valid = json_decode($json, true)["valid"];
 
        if($valid){
            return view('web.index');

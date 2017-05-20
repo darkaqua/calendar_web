@@ -9,7 +9,7 @@
 @stop
 @section('content')
 <div class="form-group row">
-<form method="post" action="{{url('/registreComplete')}}">
+<form method="post" action="{{url('/registreCompanyie')}}">
   <label for="example-text-input" class="col-2 col-form-label">Nom</label>
   <div class="col-10">
     <input class="form-control" type="text" name="companyName">
@@ -30,13 +30,7 @@
 <div class="form-group row">
   <label for="example-url-input" class="col-2 col-form-label">Telèfon</label>
   <div class="col-10">
-    <input class="form-control" type="url"name="telefon">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-tel-input" class="col-2 col-form-label">Adreça</label>
-  <div class="col-10">
-    <input class="form-control" type="tel"  name="adress">
+    <input class="form-control" name="telefon">
   </div>
 </div>
   <div>
