@@ -28,7 +28,7 @@ class loginController extends Controller
            ]
        ]);
 
-       $json = json_decode($request-> getBody());
+       $json = json_decode($request-> getBody(), true);
        $valid = $json["valid"];
 
        if($valid){
