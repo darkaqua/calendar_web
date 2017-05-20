@@ -28,13 +28,15 @@ class loginController extends Controller
            ]
        ]);
 
-       $json = $request-> getBody();
-       $valid = json_decode($json, true)["valid"];
+       $json = json_decode($request-> getBody());
+       $valid = $json["valid"];
 
        if($valid){
+           setcookie('client_id', $json['client_id'],time()+60*60*24*365, '/');
+           setcookie('token_id', $json['token_id'],time()+60*60*24*365, '/');
            return view('web.index');
        }
-       $message = json_decode($json, true)['message'];
+       $message = $json['message'];
 
        return view('web.errorPage')->with('message',$message);
 
