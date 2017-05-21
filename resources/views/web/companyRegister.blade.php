@@ -9,7 +9,7 @@
 @stop
 @section('content')
 <div class="form-group row">
-<form method="put" action="{{url('/registreCompanyie')}}">
+<form method="post" action="{{url('/registreCompanyie')}}">
   <label for="example-text-input" class="col-2 col-form-label">Nom</label>
   <div class="col-10">
     <input class="form-control" type="text" name="companyName">

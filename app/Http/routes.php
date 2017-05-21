@@ -52,4 +52,6 @@ Route::get('/pagament','pagament@paymentPage');
 Route::post('/registreComplete', 'registreController@registreEmpresa');
 Route::post('/login', 'loginController@registreLogin');
 
-Route::put('/registreCompanyie', 'registreCompanyiaController@registreCompanyies');
+Route::post('/registreCompanyie', 'registreCompanyiaController@registreCompanyies');
+
+Route::get('/mostrarCompanyia', 'mostrarCompanyiaController@mostrarCompanyies');
