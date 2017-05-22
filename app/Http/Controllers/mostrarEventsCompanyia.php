@@ -8,9 +8,9 @@ use GuzzleHttp\Client;
 
 use App\Http\Requests;
 
-class mostrarCompanyiaController extends Controller
+class mostrarEventsCompanyia extends Controller
 {
-    public function mostrarCompanyies(Request $request)
+    public function mostrarEvents(Request $request)
     {
 
 
@@ -26,15 +26,16 @@ class mostrarCompanyiaController extends Controller
                 'client_token' => $_COOKIE['client_token']
             ]     
        ]);
-                 $json = $request-> getBody();
-                $array_events = json_decode($json, true)["data"];
-
-                
+                $json = $request-> getBody();
+                $array_events = json_decode($json, true);
+      //  echo ($request->getBody());
+    
        
-       $valid = json_decode($json, true)["valid"];
-        echo ($request->getBody());
+
+       $valid = json_decode($json, true);
+
        if($valid){
-           return view('web.index');
+           return view('web.showCompanies')->with('array_events', $array_events);
        }
        $message = json_decode($json, true)['message'];
 

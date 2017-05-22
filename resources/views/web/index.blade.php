@@ -83,7 +83,7 @@
   </div>
    <div class="col-sm-4">
       <div class="well">
-      <a href="{{url('/web/registre.blade.php')}}">
+      <a href="{{url('/web/registre')}}">
         <button class="btn btn-lg"> Registrarte </button>
        </a>
       </div>

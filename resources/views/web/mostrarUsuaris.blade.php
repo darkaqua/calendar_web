@@ -9,11 +9,11 @@
 @stop
 @section('content')
  <ul>
- <form method="get" action="{{url('/mostrarCompanyia')}}">
+ <form method="get" action="{{url('/user/{uuid}')}}">
                 <div class="panel panel-default">
 
                     <!-- Default panel contents -->
-                    <div class="panel-heading" align="center">Llistat d'events</div>
+                    <div class="panel-heading" align="center">Llistat de usuaris</div>
                     <table class="table" align="center">
                         <tr>
                             <th>NOM</th>
@@ -21,18 +21,12 @@
                             <th>DATA</th>
                         </tr>
 
-                   @foreach($array_events as $events)
+                   @foreach($array_usuaris as $usuaris)
 
                     <tbody>
                         <tr>
-                            <td>{{$events["title"]}}</td>
-                            <td>{{$events["description"]}}</td>
-                            <?php
-                                $data=$events["datetime"];
-                                $date=strtotime($data);
-                                $dataMeuFormat=date('d-m-Y',$date);
-                                ?>
-                            <td><?php echo $dataMeuFormat?></td>
+                            <td>{{$usuaris["name"]}}</td>
+                            <td>{{$usuaris["username"]}}</td>
                             
                         </tr>
                     </tbody>
