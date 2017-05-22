@@ -61,6 +61,10 @@ Route::post('/pagament0', 'pagament0@paymentController0');
 
 Route::post('/registreCompanyie', 'registreCompanyiaController@registreCompanyies');
 
-Route::get('/mostrarEvents', 'mostrarEventsCompanyia@mostrarEvents');
+
 Route::get('/mostrarCompanyies', 'mostrarCompanyiesController@mostrarCompanyia');
+
 Route::get('/user/{uuid}', 'mostrarUsuarisController@mostrarUsuaris');
+Route::get('/group/{uuid}', 'mostrarGrupsController@mostrarGrups');
+
+Route::get('/groupEvents/{uuid, id}', 'mostrarEventsCompanyia@mostrarEvents');

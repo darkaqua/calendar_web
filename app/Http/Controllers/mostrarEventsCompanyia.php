@@ -18,13 +18,18 @@ class mostrarEventsCompanyia extends Controller
         
         
 
-       $url = 'calendar.darkaqua.net:8080/User/Dates';
+       $url = 'calendar.darkaqua.net:8080/Company/Group/Dates';
        $request = $client->request( 'GET', $url, [
         'headers' => [
                 'Content-Type' => 'application/json', 
                 'client_id' => $_COOKIE['client_id'], 
                 'client_token' => $_COOKIE['client_token']
-            ]     
+            ]  ,
+
+        'json' => [
+                 'company_uuid' =>  $uuid,
+                 'group_id' => $id
+             ]   
        ]);
                 $json = $request-> getBody();
                 $array_events = json_decode($json, true);

@@ -27,16 +27,18 @@
                         <tr>
                             <td>{{$companies["name"]}}</td>
                             <td>{{$companies["description"]}}</td>
-                            <td><li><a href="{{url('/mostrarEvents')}}">Mostrar events</a></li></td>
-
-                             <?php
+                            <?php
                                 $uuid=$companies["uuid"];
-                            
+
                                 ?>
+                            <td><li><a href="{{url('/group/.$uuid}')}}">Mostrar Grups</a></li></td>
+
+                             
                             <td><li><a href="{{url('/user/'.$uuid)}}">Mostrar usuaris</a></li></td>
                             
                         </tr>
                     </tbody>
+                    
                     @endforeach
                     </table>
                 </div>

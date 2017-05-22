@@ -4,31 +4,29 @@
 @stop
 @section('header')
 <div>
-	<h1>Llistat d' usuaris</h1>
+	<h1>Llistat de grups</h1>
 </div>
 @stop
 @section('content')
  <ul>
- <form method="get" action="{{url('/user/{uuid}')}}">
+ <form method="get" action="{{url('/group/{uuid}')}}">
                 <div class="panel panel-default">
 
                     <!-- Default panel contents -->
-                    <div class="panel-heading" align="center" >Llistat de usuaris</div>
-                     
+                    <div class="panel-heading" align="center">Llistat de grups</div>
                     <table class="table" align="center">
-                    
                         <tr>
                             <th>NOM</th>
-                            <th>Nom d'usuari</th>
+                            <th>Nom descripcio</th>
                             
                         </tr>
 
-                   @foreach($array_usuaris as $usuaris)
+                   @foreach($array_grups as $grups)
 
                     <tbody>
                         <tr>
-                            <td>{{$usuaris["name"]}}</td>
-                            <td>{{$usuaris["username"]}}</td>
+                            <td>{{$grups["name"]}}</td>
+                            <td>{{$grups["description"]}}</td>
                             
                         </tr>
                     </tbody>
@@ -37,14 +35,13 @@
                 </div>
 
     <div>
-     <a href="{{url('/mostrarCompanyies')}}">
-        <input type="button" class="btn btn-success" value="Mostrar Companyies" />
-        </a>
+        <input type="submit" class="btn btn-success" value="Mostrar Companyies" /></a>
         
-
+        <a href="{{url('/web/companyRegister.blade.php')}}">
+        <input type="button" class="btn btn-success" value="Registrar" /></a>
         <!--el Onclick per tirar una pagina enrera-->
-
-        <button type="button" class="btn btn-default"   onClick='history.go(-1);' >Cancelar</button>
+        <a href="{{url('/')}}">
+        <button type="button" class="btn btn-default" >Cancelar</button></a>
         
     </div> 
     </form>

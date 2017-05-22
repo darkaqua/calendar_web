@@ -9,7 +9,7 @@
 @stop
 @section('content')
  <ul>
- <form method="get" action="{{url('/mostrarCompanyia')}}">
+ <form method="get" action="{{url('/mostrarEvents')}}">
                 <div class="panel panel-default">
 
                     <!-- Default panel contents -->
