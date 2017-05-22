@@ -19,6 +19,7 @@
     </style>
 </head>
 <body>
+<form method="post" action="{{url('/pagament')}}">
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
@@ -97,6 +98,7 @@
         </div>
     </div>
 </div>
+</form>
 </body>
 
 </html>

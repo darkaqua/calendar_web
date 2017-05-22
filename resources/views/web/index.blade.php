@@ -60,6 +60,7 @@
       <span class="sr-only">Next</span>
     </a>
 </div>
+
 @stop
 @section('content')
 
@@ -104,7 +105,7 @@
 
           <label class="sr-only" for="inlineFormInputGroup">Password</label>
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="text" class="form-control" name="userPassword" placeholder="password">
+            <input  class="form-control" name="userPassword" placeholder="password"  type="password">
           </div>
 
           <div class="form-check mb-2 mr-sm-2 mb-sm-0">

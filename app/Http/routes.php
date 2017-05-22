@@ -51,6 +51,9 @@ Route::resource('webs','WebController');
 Route::get('/pagament','pagament@paymentPage');
 Route::post('/registreComplete', 'registreController@registreEmpresa');
 Route::post('/login', 'loginController@registreLogin');
+Route::post('/pagament', 'pagament@paymentController');
+Route::post('/pagament2', 'pagament2@paymentController2');
+Route::post('/pagament0', 'pagament0@paymentController0');
 
 Route::post('/registreCompanyie', 'registreCompanyiaController@registreCompanyies');
 

@@ -54,8 +54,7 @@
                                 <li><a href="{{url('/web/showCompanies.blade.php')}}">Companyies</a></li>
                                 <li><a href="{{url('/web/showGroups.blade.php')}}">Grups</a></li>
                                 </ul>
-                             </li>   
-                            <li><a data-toggle="modal" data-target="#modalContacte">Contacte</a></li>
+                             </li>    
                         </ul>
                     </div>
                 </div>
@@ -79,48 +78,5 @@
             </footer>
         </div>
 </body>
-
-
-            <div id="modalContacte" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-            <div class="modal-header">
-                <form class="form-horizontal" role="form" method="post" action="index.php">
-            <div class="form-group">
-                <label for="name" class="col-sm-2 control-label">Nom</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="message" class="col-sm-2 control-label">Missatge</label>
-                <div class="col-sm-10">
-                    <textarea class="form-control" rows="4" name="message"></textarea>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="human" class="col-sm-2 control-label"></label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-10 col-sm-offset-2">
-                    <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary" onClick='history.go(-1);'>
-                </div>
-            </div>
-                <div class="form-group">
-                 <div class="col-sm-10 col-sm-offset-2">
-                </div>
-            </div>
-        </div>
  </div>   
 </html>

@@ -13,22 +13,24 @@ class mostrarCompanyiaController extends Controller
     public function mostrarCompanyies(Request $request)
     {
 
+
         $client = new client();
         
         
 
-
-
-
-
-       $url = 'calendar.darkaqua.net:8080/Company';
-       $request = $client->request('GET', $url, array('company_uuid => Bar'), [
-          
-                
-           
+       $url = 'calendar.darkaqua.net:8080/User/Dates';
+       $request = $client->request( 'GET', $url, [
+        'headers' => [
+                'Content-Type' => 'application/json', 
+                'client_id' => $_COOKIE['client_id'], 
+                'client_token' => $_COOKIE['client_token']
+            ]     
        ]);
+                 $json = $request-> getBody();
+                $array_events = json_decode($json, true)["data"];
 
-       $json = $request-> getBody();
+                
+       
        $valid = json_decode($json, true)["valid"];
         echo ($request->getBody());
        if($valid){

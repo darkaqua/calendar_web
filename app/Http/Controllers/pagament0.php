@@ -7,13 +7,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use GuzzleHttp\Client;
 
-class pagament extends Controller
+class pagament0 extends Controller
 {
-    public function paymentController(Request $request)
+    public function paymentController0(Request $request)
     {
         $client = new client();
 
-       // $payment_id1 = $request ['1'];
+        // $payment_id1 = $request ['1'];
         // $payment_id2 = $request ['2'];
         // $payment_id3 = $request ['3'];
 
@@ -25,7 +25,7 @@ class pagament extends Controller
                 'client_token' => $_COOKIE['client_token']
             ],
         'json' => [
-                'payment_id' => '2'            
+                'payment_id' => '1'            
            ]
        ]);
 
