@@ -14,25 +14,25 @@
 <div class="form-group row">
   <label for="example-text-input" class="col-2 col-form-label">Nom</label>
   <div class="col-10">
-    <input class="form-control" type="text" value="<?php echo $nom;?>">
+    <input class="form-control"  value="<?php echo $nom;?>" disabled>
   </div>
 </div>
 <div class="form-group row">
   <label for="example-search-input" class="col-2 col-form-label">Nom d'usuair</label>
   <div class="col-10">
-    <input class="form-control" type="search" value="<?php echo $userName;?>">
+    <input class="form-control" type="search" value="<?php echo $userName;?>" disabled>
   </div>
 </div>
 <div class="form-group row">
   <label for="example-email-input" class="col-2 col-form-label">Email</label>
   <div class="col-10">
-    <input class="form-control" type="email"  value="<?php echo $email;?>">
+    <input class="form-control" type="email"  value="<?php echo $email;?>" disabled>
   </div>
 </div>
   <div class="form-group row">
     <label for="example-password-input" class="col-2 col-form-label">Telèfon</label>
     <div class="col-10">
-      <input class="form-control" type="tel" value="<?php echo $telephone;?>">
+      <input class="form-control" type="tel" value="<?php echo $telephone;?>" disabled>
     </div>
 </div>
 </div>
