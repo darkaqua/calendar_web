@@ -40,7 +40,7 @@
                             <li><a href="{{url('/web/test.blade.php')}}">Agenda</a></li>-->
                             <li><a href="{{url('/tarifa')}}">Tarifes</a></li>
                             <li><a href="{{url('/mostrarCompanyies')}}">Companyies</a></li>
-                            <li><a href="{{url('/mostrarCompanyies')}}">Events</a></li>
+          
                            
                         </ul>
                     </div>
