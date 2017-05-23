@@ -3,9 +3,8 @@
     index
 @stop
 @section('header')
-<div>
-	<h1>Llistat d'events</h1>
-</div>
+
+
 @stop
 @section('content')
  <ul>
@@ -19,6 +18,7 @@
                             <th>NOM</th>
                             <th>DESCRIPCIÓ</th>
                             <th>DATA</th>
+                            <th>Mostrar Usuaris</th>
                         </tr>
 
                    @foreach($array_events as $events)
@@ -31,9 +31,15 @@
                                 $data=$events["datetime"];
                                 $date=strtotime($data);
                                 $dataMeuFormat=date('d-m-Y',$date);
+
+                                $id=$events["group_id"];
+                                $uuid = $events["company_uuid"];
+                                $idEvent = $events["id"];
+
                                 ?>
                             <td><?php echo $dataMeuFormat?></td>
-                            
+                            <td><a href="{{url('/groupEvents/'.$uuid.'/events/'.$id.'/usuaris/'.$idEvent)}}">Mostrar Usuaris</a></td>
+                      
                         </tr>
                     </tbody>
                     @endforeach

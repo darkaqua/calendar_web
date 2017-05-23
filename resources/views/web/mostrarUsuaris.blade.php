@@ -3,14 +3,13 @@
     index
 @stop
 @section('header')
-<div>
-	<h1>Llistat d' usuaris</h1>
-</div>
+
 @stop
 @section('content')
  <ul>
  <form method="get" action="{{url('/user/{uuid}')}}">
                 <div class="panel panel-default">
+
 
                     <!-- Default panel contents -->
                     <div class="panel-heading" align="center" >Llistat de usuaris</div>

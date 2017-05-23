@@ -3,21 +3,25 @@
     index
 @stop
 @section('header')
-<div>
-	<h1>Llistat de grups</h1>
-</div>
+
 @stop
 @section('content')
  <ul>
  <form method="get" action="{{url('/group/{uuid}')}}">
                 <div class="panel panel-default">
 
+                   
+                    <?php $uuid=$uuid ?>
+
+        
                     <!-- Default panel contents -->
                     <div class="panel-heading" align="center">Llistat de grups</div>
                     <table class="table" align="center">
                         <tr>
                             <th>NOM</th>
-                            <th>Nom descripcio</th>
+                            <th>Descripció</th>
+                            <th>Events del grup</th>
+                            <th>Usuaris del grup</th>
                             
                         </tr>
 
@@ -28,10 +32,20 @@
                             <td>{{$grups["name"]}}</td>
                             <td>{{$grups["description"]}}</td>
                             
+                             <?php
+                                     $id=$grups["id"];
+
+                                ?>
+                            
+                            <td><a href="{{url('/groupEvents/'.$uuid.'/events/'.$id)}}">Mostrar events</a></td>
+
+                            <td><a href="{{url('/usuarisGrups/'.$uuid.'/usuaris/'.$id)}}">Mostrar Usuaris</a></td>
+                          
                         </tr>
                     </tbody>
                     @endforeach
                     </table>
+        
                 </div>
 
     <div>

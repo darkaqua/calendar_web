@@ -46,15 +46,8 @@
                                 <!--
                             <li><a href="{{url('/web/test.blade.php')}}">Agenda</a></li>-->
                             <li><a href="{{url('/tarifa')}}">Tarifes</a></li>
-                            <li><a href="{{url('/mostrarCompanyies')}}">Calendari</a></li>
-                            <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                Llistat <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                <li><a  href="{{url('/mostrarEvents')}}">Companyies</a></li>
-                                <li><a href="{{url('/web/showGroups.blade.php')}}">Grups</a></li>
-                                </ul>
-                             </li>    
+                            <li><a href="{{url('/mostrarCompanyies')}}">Companyies</a></li>
+                           
                         </ul>
                     </div>
                 </div>

@@ -30,16 +30,21 @@ class mostrarGrupsController extends Controller
              ] 
         ]);
                  $json = $request-> getBody();
-                 $array_usuaris = json_decode($json, true);
+                 $array_grups = json_decode($json, true);
     
     
-       
 
-        $valid = json_decode($json, true);
 
-       if($valid){
-           return view('web.mostrarGrups')->with('array_grups', $array_grups);;
+            $valid = json_decode($json, true);
+
+        if($valid){
+            return view('web.mostrarGrups')
+           ->with('uuid', $uuid)
+            ->with('array_grups', $array_grups);
+            
        }
+
+       
        $message = json_decode($json, true)['message'];
 
        return view('web.errorPage')->with('message',$message);

@@ -3,9 +3,7 @@
     index
 @stop
 @section('header')
-<div>
-	<h1>Llistat de grups</h1>
-</div>
+
 @stop
 @section('content')
  <ul>

@@ -10,8 +10,9 @@ use App\Http\Requests;
 
 class mostrarEventsCompanyia extends Controller
 {
-    public function mostrarEvents(Request $request)
+    public function mostrarEvents($uuid, $id)
     {
+
 
 
         $client = new client();
