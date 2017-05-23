@@ -7,7 +7,7 @@
 @section('content')
 
 
-<h1>ERROR <?php echo $message;
+<h1> <?php echo $message;
 ?>
 </h1>
 @stop

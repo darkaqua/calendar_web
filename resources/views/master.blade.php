@@ -35,26 +35,13 @@
                     <div class="    collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="  fontSize  nav navbar-nav">
                             <li><a href="{{url('/')}}">Inici <span class="sr-only">(current)</span></a> </li>
-                            <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                Perfil <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{url('/web/companyRegister.blade.php')}}">Companyia</a></li>
-                                <li><a href="{{url('/web/groupRegister.blade.php')}}">Grup</a></li>
-                            </ul>
-                            </li>
+                            <li><a href="{{url('/infoUser')}}">Perfil</a></li>
                                 <!--
                             <li><a href="{{url('/web/test.blade.php')}}">Agenda</a></li>-->
                             <li><a href="{{url('/tarifa')}}">Tarifes</a></li>
-                            <li><a href="{{url('/mostrarCompanyies')}}">Calendari</a></li>
-                            <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                Llistat <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                <li><a  href="{{url('/mostrarEvents')}}">Companyies</a></li>
-                                <li><a href="{{url('/web/showGroups.blade.php')}}">Grups</a></li>
-                                </ul>
-                             </li>    
+                            <li><a href="{{url('/mostrarCompanyies')}}">Companyies</a></li>
+                            <li><a href="{{url('/mostrarCompanyies')}}">Events</a></li>
+                           
                         </ul>
                     </div>
                 </div>

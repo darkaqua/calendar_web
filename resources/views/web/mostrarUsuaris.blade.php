@@ -3,14 +3,13 @@
     index
 @stop
 @section('header')
-<div>
-	<h1>Llistat d' usuaris</h1>
-</div>
+
 @stop
 @section('content')
  <ul>
  <form method="get" action="{{url('/user/{uuid}')}}">
                 <div class="panel panel-default">
+
 
                     <!-- Default panel contents -->
                     <div class="panel-heading" align="center" >Llistat de usuaris</div>
@@ -43,9 +42,7 @@
         
 
         <!--el Onclick per tirar una pagina enrera-->
-
-        <button type="button" class="btn btn-default"   onClick='history.go(-1);' >Cancelar</button>
-        
+             <input type="submit" class="btn btn-success" onClick='history.go(-1);' value="BACK" />
     </div> 
     </form>
  </ul>

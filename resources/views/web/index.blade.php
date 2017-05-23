@@ -84,7 +84,7 @@
    <div class="col-sm-4">
       <div class="well">
       <a href="{{url('/web/registre')}}">
-        <button class="btn btn-lg"> Registrarte </button>
+        <button class="btn btn-lg" action="{{url('/web/registre')}}"> Registrarte </button>
        </a>
       </div>
   </div>

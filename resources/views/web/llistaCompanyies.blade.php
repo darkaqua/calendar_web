@@ -3,9 +3,7 @@
     index
 @stop
 @section('header')
-<div>
-	<h1>Llistat de companyies</h1>
-</div>
+
 @stop
 @section('content')
  <ul>
@@ -31,7 +29,7 @@
                                 $uuid=$companies["uuid"];
 
                                 ?>
-                            <td><li><a href="{{url('/group/.$uuid}')}}">Mostrar Grups</a></li></td>
+                            <td><li><a href="{{url('/group/'.$uuid)}}">Mostrar Grups</a></li></td>
 
                              
                             <td><li><a href="{{url('/user/'.$uuid)}}">Mostrar usuaris</a></li></td>
@@ -45,12 +43,8 @@
 
     <div>
         <input type="submit" class="btn btn-success" value="Mostrar Companyies" /></a>
-        
-        <a href="{{url('/web/companyRegister.blade.php')}}">
-        <input type="button" class="btn btn-success" value="Registrar" /></a>
         <!--el Onclick per tirar una pagina enrera-->
-        <a href="{{url('/')}}">
-        <button type="button" class="btn btn-default" >Cancelar</button></a>
+        <button type="button" class="btn btn-default"   onClick='history.go(-1);' >Cancelar</button>
         
     </div> 
     </form>
