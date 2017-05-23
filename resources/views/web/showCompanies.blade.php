@@ -48,12 +48,8 @@
 
     <div>
         <input type="submit" class="btn btn-success" value="Mostrar Companyies" /></a>
-        
-        <a href="{{url('/web/companyRegister.blade.php')}}">
-        <input type="button" class="btn btn-success" value="Registrar" /></a>
         <!--el Onclick per tirar una pagina enrera-->
-        <a href="{{url('/')}}">
-        <button type="button" class="btn btn-default" >Cancelar</button></a>
+         <button type="button" class="btn btn-default"   onClick='history.go(-1);' >Cancelar</button>
         
     </div> 
     </form>

@@ -42,9 +42,7 @@
         
 
         <!--el Onclick per tirar una pagina enrera-->
-
-        <button type="button" class="btn btn-default"   onClick='history.go(-1);' >Cancelar</button>
-        
+             <input type="submit" class="btn btn-success" onClick='history.go(-1);' value="BACK" />
     </div> 
     </form>
  </ul>

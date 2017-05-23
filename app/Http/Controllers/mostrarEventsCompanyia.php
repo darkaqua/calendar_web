@@ -39,13 +39,13 @@ class mostrarEventsCompanyia extends Controller
        
 
        $valid = json_decode($json, true);
-
+       
        if($valid){
            return view('web.showCompanies')->with('array_events', $array_events);
        }
-       $message = json_decode($json, true)['message'];
+ return view('web.errorPage')->with('message', 'No hi ha cap event');
 
-       return view('web.errorPage')->with('message',$message);
+    //    return view('web.errorPage')->with('message','No hi ha events disponibles');
 
     }
 }

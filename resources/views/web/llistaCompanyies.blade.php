@@ -44,8 +44,7 @@
     <div>
         <input type="submit" class="btn btn-success" value="Mostrar Companyies" /></a>
         <!--el Onclick per tirar una pagina enrera-->
-        <a href="{{url('/')}}">
-        <button type="button" class="btn btn-default" >Inici</button></a>
+        <button type="button" class="btn btn-default"   onClick='history.go(-1);' >Cancelar</button>
         
     </div> 
     </form>

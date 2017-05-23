@@ -72,3 +72,5 @@ Route::get('/group/{uuid}', 'mostrarGrupsController@mostrarGrups');
 Route::get('/groupEvents/{uuid}/events/{id}', 'mostrarEventsCompanyia@mostrarEvents');
 
 Route::get('/groupEvents/{uuid}/events/{id}/usuaris/{idEvent}', 'mostrarUsuarisController@mostrarUsuarisEvents');
+
+Route::get('/infoUser', 'mostrarPerfil@mostrarPerfil');

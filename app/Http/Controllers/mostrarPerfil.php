@@ -8,9 +8,9 @@ use GuzzleHttp\Client;
 
 use App\Http\Requests;
 
-class mostrarGrupsController extends Controller
+class mostrarPerfil extends Controller
 {
-    public function mostrarGrups($uuid)
+    public function mostrarPerfil()
     {
 
 
@@ -18,7 +18,7 @@ class mostrarGrupsController extends Controller
         
         
 
-        $url = 'calendar.darkaqua.net:8080/Company/Groups';
+        $url = 'calendar.darkaqua.net:8080/User';
         $request = $client->request( 'GET', $url, [
          'headers' => [
                  'Content-Type' => 'application/json', 
@@ -26,11 +26,11 @@ class mostrarGrupsController extends Controller
                  'client_token' => $_COOKIE['client_token']
              ],
              'json' => [
-                 'company_uuid' =>  $uuid
+                 'user_uuid' => "62fed043-8465-409d-9489-6c729ed0b8df"
              ] 
         ]);
                  $json = $request-> getBody();
-                 $array_grups = json_decode($json, true);
+                 $array_perfil = json_decode($json, true);
     
     
 
@@ -38,16 +38,16 @@ class mostrarGrupsController extends Controller
             $valid = json_decode($json, true);
 
         if($valid){
-            return view('web.mostrarGrups')
-           ->with('uuid', $uuid)
-            ->with('array_grups', $array_grups);
+            return view('web.perfil')
+
+            ->with('array_perfil', $array_perfil);
             
        }
 
        
        $message = json_decode($json, true)['message'];
 
-        return view('web.errorPage')->with('message', 'No hi ha cap grup');
+       return view('web.errorPage')->with('message',$message);
 
     }
 }

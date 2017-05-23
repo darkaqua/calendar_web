@@ -119,7 +119,7 @@ class mostrarUsuarisController extends Controller
        }
        $message = json_decode($json, true)['message'];
 
-       return view('web.errorPage')->with('message',$message);
+        return view('web.errorPage')->with('message', 'No hi ha cap usuari');
 
     }
 
