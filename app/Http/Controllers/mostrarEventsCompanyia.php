@@ -8,9 +8,9 @@ use GuzzleHttp\Client;
 
 use App\Http\Requests;
 
-class mostrarCompanyiaController extends Controller
+class mostrarEventsCompanyia extends Controller
 {
-    public function mostrarCompanyies(Request $request)
+    public function mostrarEvents(Request $request)
     {
 
 
@@ -18,23 +18,29 @@ class mostrarCompanyiaController extends Controller
         
         
 
-       $url = 'calendar.darkaqua.net:8080/User/Dates';
+       $url = 'calendar.darkaqua.net:8080/Company/Group/Dates';
        $request = $client->request( 'GET', $url, [
         'headers' => [
                 'Content-Type' => 'application/json', 
                 'client_id' => $_COOKIE['client_id'], 
                 'client_token' => $_COOKIE['client_token']
-            ]     
-       ]);
-                 $json = $request-> getBody();
-                $array_events = json_decode($json, true)["data"];
+            ]  ,
 
-                
+        'json' => [
+                 'company_uuid' =>  $uuid,
+                 'group_id' => $id
+             ]   
+       ]);
+                $json = $request-> getBody();
+                $array_events = json_decode($json, true);
+      //  echo ($request->getBody());
+    
        
-       $valid = json_decode($json, true)["valid"];
-        echo ($request->getBody());
+
+       $valid = json_decode($json, true);
+
        if($valid){
-           return view('web.index');
+           return view('web.showCompanies')->with('array_events', $array_events);
        }
        $message = json_decode($json, true)['message'];
 

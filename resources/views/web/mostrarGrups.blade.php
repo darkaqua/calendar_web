@@ -4,35 +4,29 @@
 @stop
 @section('header')
 <div>
-	<h1>Llistat d'events</h1>
+	<h1>Llistat de grups</h1>
 </div>
 @stop
 @section('content')
  <ul>
- <form method="get" action="{{url('/mostrarEvents')}}">
+ <form method="get" action="{{url('/group/{uuid}')}}">
                 <div class="panel panel-default">
 
                     <!-- Default panel contents -->
-                    <div class="panel-heading" align="center">Llistat d'events</div>
+                    <div class="panel-heading" align="center">Llistat de grups</div>
                     <table class="table" align="center">
                         <tr>
                             <th>NOM</th>
-                            <th>DESCRIPCIÓ</th>
-                            <th>DATA</th>
+                            <th>Nom descripcio</th>
+                            
                         </tr>
 
-                   @foreach($array_events as $events)
+                   @foreach($array_grups as $grups)
 
                     <tbody>
                         <tr>
-                            <td>{{$events["title"]}}</td>
-                            <td>{{$events["description"]}}</td>
-                            <?php
-                                $data=$events["datetime"];
-                                $date=strtotime($data);
-                                $dataMeuFormat=date('d-m-Y',$date);
-                                ?>
-                            <td><?php echo $dataMeuFormat?></td>
+                            <td>{{$grups["name"]}}</td>
+                            <td>{{$grups["description"]}}</td>
                             
                         </tr>
                     </tbody>

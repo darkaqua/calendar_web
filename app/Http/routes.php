@@ -17,8 +17,11 @@ Route::get('/', function () {
 Route::get('/web/test.blade.php', function () {
     return view('web.test');
     });
-Route::get('/web/registre.blade.php', function () {
+Route::get('/web/registre', function () {
     return view('web.registre');
+    });
+    Route::get('/web/llistaCompanyies', function () {
+    return view('web.llistaCompanyies');
     });
     Route::get('/web/errorPage.blade.php', function () {
     return view('web.errorPage');
@@ -29,9 +32,10 @@ Route::get('/web/registre.blade.php', function () {
     Route::get('/web/groupRegister.blade.php', function () {
     return view('web.groupRegister');
     });
-    Route::get('/web/showCompanies.blade.php', function () {
+    Route::get('/showCompanies', function () {
     return view('web.showCompanies');
     });
+    
     Route::get('/web/showGroups.blade.php', function () {
     return view('web.showGroups');
     });
@@ -57,4 +61,10 @@ Route::post('/pagament0', 'pagament0@paymentController0');
 
 Route::post('/registreCompanyie', 'registreCompanyiaController@registreCompanyies');
 
-Route::get('/mostrarCompanyia', 'mostrarCompanyiaController@mostrarCompanyies');
+
+Route::get('/mostrarCompanyies', 'mostrarCompanyiesController@mostrarCompanyia');
+
+Route::get('/user/{uuid}', 'mostrarUsuarisController@mostrarUsuaris');
+Route::get('/group/{uuid}', 'mostrarGrupsController@mostrarGrups');
+
+Route::get('/groupEvents/{uuid, id}', 'mostrarEventsCompanyia@mostrarEvents');

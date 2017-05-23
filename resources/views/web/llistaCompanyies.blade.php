@@ -4,38 +4,41 @@
 @stop
 @section('header')
 <div>
-	<h1>Llistat d'events</h1>
+	<h1>Llistat de companyies</h1>
 </div>
 @stop
 @section('content')
  <ul>
- <form method="get" action="{{url('/mostrarEvents')}}">
+ <form method="get" action="{{url('/mostrarCompanyies')}}">
                 <div class="panel panel-default">
 
                     <!-- Default panel contents -->
-                    <div class="panel-heading" align="center">Llistat d'events</div>
+                    <div class="panel-heading" align="center">Llistat de companyies</div>
                     <table class="table" align="center">
                         <tr>
                             <th>NOM</th>
                             <th>DESCRIPCIÓ</th>
-                            <th>DATA</th>
+                            
                         </tr>
 
-                   @foreach($array_events as $events)
+                   @foreach($array_companyies as $companies)
 
                     <tbody>
                         <tr>
-                            <td>{{$events["title"]}}</td>
-                            <td>{{$events["description"]}}</td>
+                            <td>{{$companies["name"]}}</td>
+                            <td>{{$companies["description"]}}</td>
                             <?php
-                                $data=$events["datetime"];
-                                $date=strtotime($data);
-                                $dataMeuFormat=date('d-m-Y',$date);
+                                $uuid=$companies["uuid"];
+
                                 ?>
-                            <td><?php echo $dataMeuFormat?></td>
+                            <td><li><a href="{{url('/group/.$uuid}')}}">Mostrar Grups</a></li></td>
+
+                             
+                            <td><li><a href="{{url('/user/'.$uuid)}}">Mostrar usuaris</a></li></td>
                             
                         </tr>
                     </tbody>
+                    
                     @endforeach
                     </table>
                 </div>

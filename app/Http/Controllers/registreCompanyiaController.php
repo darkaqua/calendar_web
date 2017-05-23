@@ -36,7 +36,7 @@ class registreCompanyiaController extends Controller
        $valid = json_decode($json, true);
 
        if($valid){
-           return view('web.index');
+           return view('web.showCompanies');
        }
        $message = json_decode($json, true)['message'];
 
